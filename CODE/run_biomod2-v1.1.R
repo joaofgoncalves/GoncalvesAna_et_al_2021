@@ -36,12 +36,19 @@ countDistinct <- function(x) length(unique(x))
 
 abbrevNames <- function(x) paste(str_to_title(unlist(strsplit(gsub("\\.","",x),"\\ "))),collapse="")
 
+## function to define the intersect of rasters
+intersect_mask <- function(x){
+  values_x <- getValues(x)
+  inter_x <- values_x %*% rep(1,nlayers(x))
+  mask <- setValues(subset(x,1),values = (inter_x>0))
+  return(mask)
+}
 
 ## -------------------------------------------------------------------------------------- ##
 ## Input parameters ----
 ## -------------------------------------------------------------------------------------- ##
 
-# Selected variables by group
+# Selected variable names by group
 # CHANGE THIS IF NEEDED!!...
 #
 selVarsClim <- paste("bio_",c(1,11,12,18),sep="")
@@ -123,6 +130,8 @@ selVarsAll <- c(selVarsClim, selVarsForest, selVarsRemoteSensing,
 
 # Make the final raster stack with all the selected variables
 current <- current[[selVarsAll]]
+
+current <- stack(mask(current, intersect_mask(current)))
 
 # proj2050 <- stack("")
 # names(proj2050) <- paste("bio_",1:19,sep="")
@@ -209,7 +218,10 @@ write.csv(evalDF.KAPPA, file = paste(getwd(),"/",sp,"/",sp,"_evalDF_KAPPA.csv",s
 varImportance <- get_variables_importance(myBiomodModelOut)
 varImportanceByVariableAVG <- apply(varImportance,1,mean)
 varImportanceByVariableSTD <- apply(varImportance,1,sd)
-vimpDF <- data.frame(vimpAVG = varImportanceByVariableAVG, varImpSTD=varImportanceByVariableSTD)
+vimpDF <- data.frame(cnames=names(varImportanceByVariableAVG),
+                     vimpAVG = varImportanceByVariableAVG, 
+                     varImpSTD=varImportanceByVariableSTD) %>% 
+          arrange(desc(vimpAVG))
 
 write.csv(vimpDF, file = paste(getwd(),"/",sp,"/",sp,"_varImportance.csv",sep=""))
 
