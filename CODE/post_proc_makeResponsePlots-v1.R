@@ -4,24 +4,27 @@ library(raster)
 library(ggplot2)
 library(dplyr)
 library(ggExtra)
-
-source("D:/MyDocs/R-dev/biomod2plus/R/biomod2plus.R")
-
-load("./OUT/Allsprecords_ModObjects.RData")
+library(tidyr)
+library(biomod2plus)
+#source("D:/MyDocs/R-dev/biomod2plus/R/biomod2plus.R")
 
 setwd("./OUT")
+
+load("Allsprecords_ModObjects.RData")
 
 
 DF <- values(current) %>% na.omit %>% as.data.frame
 colnames(DF)
 
+
 ## ------------------------------------------------------------------------ ##
 ## ------------------------------------------------------------------------ ##
 ## ------------------------------------------------------------------------ ##
 
-
-allModAlgos <- c("GLM", "GBM", "GAM", "CTA", "ANN", "FDA", "MARS", 
-                 "RF", "MAXENT.Phillips", "MAXENT.Tsuruoka")
+# allModAlgos <- c("GLM", "GBM", "GAM", "CTA", "ANN", "FDA", "MARS", 
+#                  "RF", "MAXENT.Phillips", "MAXENT.Tsuruoka")
+# 
+allModAlgos <- c("GBM", "GAM", "RF")
 
 for(modAlgo in allModAlgos){
   cat("Processing algorithm:",modAlgo,".....\n\n")
@@ -29,10 +32,10 @@ for(modAlgo in allModAlgos){
   
   responsePlots(myBiomodModelOut, Data=DF, modelsToUse = myMods, 
                 showVars="all", fixedVarMetric = 'mean', plotStdErr = TRUE,
-                addMarginalPlot = FALSE,
-                filePrefix=paste("ResponsePlot_",modAlgo,"_",sep=""), 
-                outFolder = "./RespPlots", height=4, width=4, plot=FALSE, 
-                save=TRUE)
+                addMarginalPlot = TRUE, marginPlotType = "histogram",
+                filePrefix="ResponsePlot_", fileSuffix=paste("_",modAlgo,sep=""),
+                outFolder = "./Allsprecords/ResponsePlots", height=4, 
+                width=4, plot=FALSE, save=TRUE)
   rm(list=myMods)
   cat(" done.\n\n")
 }
@@ -40,3 +43,15 @@ for(modAlgo in allModAlgos){
 
 
 rm(list=ls()[grepl("Allsprecords_",ls())])
+
+
+## ------------------------------------------------------------------------ ##
+## ------------------------------------------------------------------------ ##
+## ------------------------------------------------------------------------ ##
+
+evalMetricPlot(myBiomodModelOut, evalMetric = "TSS", save = TRUE)
+
+varImportancePlot(myBiomodModelOut,by = "all", save = TRUE)
+
+
+
