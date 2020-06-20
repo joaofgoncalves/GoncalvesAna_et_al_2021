@@ -80,14 +80,14 @@ selVarsRemoteSensing <- c("EVI_median_mb")
 ## ------------------------------------------------------------------------ ##
 
 # Column used to filter presence points
-colToFilterBy <- "clusters" # clusters OR "species"
+colToFilterBy <- "species" # clusters OR "species"
 
 # Specis or cluster name to model
 # If the option "AllSpRecords" is used then no filter is applied 
 # and all records are considered for modelling
 
-#spNameSelected <- "cluster 1"
-spNameSelected <- "AllSpRecords"
+spNameSelected <- "Ariasella sp.2"
+#spNameSelected <- "AllSpRecords"
 
 # Names for the 'projective' raster stacks
 # See the section below where the raster data is loaded
@@ -197,7 +197,7 @@ myBiomodOptions <- BIOMOD_ModelingOptions(GAM = list(k = 3),
 myBiomodModelOut <- BIOMOD_Modeling(
   data = myBiomodData, # Input data
   models = c('GLM','GBM','GAM','CTA','ANN',
-             'FDA','MARS','RF','MAXENT.Phillips.2'), # Models to run
+             'FDA','MARS','RF'), # Models to run
   models.options = myBiomodOptions,
   NbRunEval = 20, # Number of Evaluation runs
   DataSplit = 80, # Train percentage

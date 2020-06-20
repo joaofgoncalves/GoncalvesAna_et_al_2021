@@ -86,8 +86,8 @@ colToFilterBy <- "clusters" # clusters OR "species"
 # If the option "AllSpRecords" is used then no filter is applied 
 # and all records are considered for modelling
 
-#spNameSelected <- "cluster 1"
-spNameSelected <- "AllSpRecords"
+spNameSelected <- "cluster 2"
+#spNameSelected <- "AllSpRecords"
 
 # Names for the 'projective' raster stacks
 # See the section below where the raster data is loaded

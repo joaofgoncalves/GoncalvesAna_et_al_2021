@@ -80,14 +80,14 @@ selVarsRemoteSensing <- c("EVI_median_mb")
 ## ------------------------------------------------------------------------ ##
 
 # Column used to filter presence points
-colToFilterBy <- "clusters" # clusters OR "species"
+colToFilterBy <- "species" # clusters OR "species"
 
 # Specis or cluster name to model
 # If the option "AllSpRecords" is used then no filter is applied 
 # and all records are considered for modelling
 
-#spNameSelected <- "cluster 1"
-spNameSelected <- "AllSpRecords"
+spNameSelected <- "Ariasella sp.3"
+#spNameSelected <- "AllSpRecords"
 
 # Names for the 'projective' raster stacks
 # See the section below where the raster data is loaded
