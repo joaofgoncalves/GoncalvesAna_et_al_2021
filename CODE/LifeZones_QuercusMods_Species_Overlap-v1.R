@@ -163,3 +163,15 @@ iouMatrixLZ %>% round(2)
 
 intCovMatrix %>% round(2)
 intCovMatrixLZ %>% round(2)
+
+setwd("D:/Projects/Colab_AGoncalves/MSc_AGoncalves")
+
+write.csv(iouMatrix,"./OUT/iouMatrix-v1.csv",row.names = TRUE)
+write.csv(corMatrix,"./OUT/corMatrix-v1.csv",row.names = TRUE)
+write.csv(iouMatrixLZ,"./OUT/iouMatrixLZ-v1.csv",row.names = TRUE)
+write.csv(intCovMatrix,"./OUT/intCovMatrix-v1.csv",row.names = TRUE)
+write.csv(intCovMatrixLZ,"./OUT/intCovMatrixLZ-v1.csv",row.names = TRUE)
+
+
+
+
