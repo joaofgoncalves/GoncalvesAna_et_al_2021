@@ -1,0 +1,17 @@
+"C:/Program Files/R/R-4.0.0/bin/Rscript.exe" D:/Projects/Colab_AGoncalves/MSc_AGoncalves/CODE/RunBIOMOD2_Scripts/run_biomod2-v1.1--AllSpeciesData.R --vanilla
+
+"C:/Program Files/R/R-4.0.0/bin/Rscript.exe" D:/Projects/Colab_AGoncalves/MSc_AGoncalves/CODE/RunBIOMOD2_Scripts/run_biomod2-v1.1--Cluster_1_T.semiaptera.R --vanilla
+
+"C:/Program Files/R/R-4.0.0/bin/Rscript.exe" D:/Projects/Colab_AGoncalves/MSc_AGoncalves/CODE/RunBIOMOD2_Scripts/run_biomod2-v1.1--Cluster_2_T.iberica.R --vanilla
+
+"C:/Program Files/R/R-4.0.0/bin/Rscript.exe" D:/Projects/Colab_AGoncalves/MSc_AGoncalves/CODE/RunBIOMOD2_Scripts/run_biomod2-v1.1--Cluster_4_PhylRelatedSpecies.R --vanilla
+
+"C:/Program Files/R/R-4.0.0/bin/Rscript.exe" D:/Projects/Colab_AGoncalves/MSc_AGoncalves/CODE/RunBIOMOD2_Scripts/run_biomod2-v1.1--T.ebejeri.sp1.R --vanilla
+
+"C:/Program Files/R/R-4.0.0/bin/Rscript.exe" D:/Projects/Colab_AGoncalves/MSc_AGoncalves/CODE/RunBIOMOD2_Scripts/run_biomod2-v1.1--T.cantabrica.sp3.R --vanilla
+
+
+
+"C:/Program Files/R/R-4.0.0/bin/Rscript.exe" D:/Projects/Colab_AGoncalves/MSc_AGoncalves/CODE/RunBIOMOD2_Scripts/run_biomod2-v1.1--T.stenoptera.sp2.R --vanilla
+
+"C:/Program Files/R/R-4.0.0/bin/Rscript.exe" D:/Projects/Colab_AGoncalves/MSc_AGoncalves/CODE/RunBIOMOD2_Scripts/run_biomod2-v1.1--T.lusitanica.R --vanilla
