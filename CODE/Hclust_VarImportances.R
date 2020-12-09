@@ -9,7 +9,7 @@ dirList <- list.dirs(baseFolder,recursive = FALSE,full.names = FALSE)[-c(1,6)]
 spNames <- c("AllSpeciesRecords",
              "T_lusitanica",
              "T_ebejeri",
-             "T_stenoptera",
+             #"T_stenoptera",
              #"T_cantabrica",
              "T_semiaptera",
              "T_iberica",
@@ -43,7 +43,7 @@ d <- as.dist((1 - cor(varImpBySp2[,-1], method = "spearman")) / 2)
 hc.wardD2 <- hclust(d, method="ward.D2")
 hc.avg <- hclust(d, method="average")
 
-png(filename="HClust_VarImp_All-v2.png",width = 2800, height = 2000, res = 300)
+png(filename="HClust_VarImp_All-v3.png",width = 2800, height = 2000, res = 300)
 par(mfrow=c(1,2))
 plot(hc.wardD2, main = "HClust Var. imp. | Ward D2")
 plot(hc.avg, main = "HClust Var. imp. | Average")
@@ -62,7 +62,7 @@ d <- as.dist((1 - cor(varImpBySp3[,-1], method = "spearman")) / 2)
 hc.wardD2 <- hclust(d, method="ward.D2")
 hc.avg <- hclust(d, method="average")
 
-png(filename="HClust_VarImp_SpeciesOnly-v2.png",width = 2800, height = 2000, res = 300)
+png(filename="HClust_VarImp_SpeciesOnly-v3.png",width = 2800, height = 2000, res = 300)
 par(mfrow=c(1,2))
 plot(hc.wardD2, main = "HClust Var. imp. | Ward D2")
 plot(hc.avg, main = "HClust Var. imp. | Average")
