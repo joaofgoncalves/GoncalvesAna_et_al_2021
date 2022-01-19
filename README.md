@@ -14,7 +14,7 @@ Their distribution is connected to the Temperate–Eurosiberian life zone. T. se
 
 Ant-like fly’ ranges overlap with deciduous/marcescent oak species, acting as suitable indicators of their presence in Iberia. Southern marcescent forests emerge as “islands” with particular interest for future prospections. Ant-like flies are threatened by several factors such as climate change and habitat destruction, including urbanization and forest fires. This study provides vital tools to better assess the ant-like flies’ conservation status and to manage their habitat.
 
-Full text (here)[https://www.mdpi.com/2075-4450/12/12/1068]
+_Full text_ [here](https://www.mdpi.com/2075-4450/12/12/1068)
            
 ### Keywords
 
@@ -22,6 +22,6 @@ species distribution modelling; habitat suitability; native oak forests; flightl
 
 ## Supplementary Material
 
-Externally hosted supplementary file 1
-Doi: (https://doi.org/10.5281/zenodo.5730507)[https://doi.org/10.5281/zenodo.5730507]
-Link: (https://zenodo.org/record/5730507#.YaGSZd9UmUk)[https://zenodo.org/record/5730507#.YaGSZd9UmUk]
+Doi: [https://doi.org/10.5281/zenodo.5730507](https://doi.org/10.5281/zenodo.5730507)       
+
+Link: [https://zenodo.org/record/5730507#.YaGSZd9UmUk](https://zenodo.org/record/5730507#.YaGSZd9UmUk)
